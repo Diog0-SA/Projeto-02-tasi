@@ -4,6 +4,7 @@ Esse projeto tem o intuito de simular um site de uma pizzaria. O site contará c
 
 O projeto não vai ao ar, o intuito é o aprendizado e experiência. O tempo de desenvolvimento foi durante a matéria de Tópicos Avançados em Sistemas de Informação I na UNICSUL.
 
+**Os módulos do node estão em .rar
 
 ## Resumo
 - Professor: Vinicius Heltai Pacheco
