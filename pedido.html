@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pedidos</title>
+        <style>
+body{
+    font-family: monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(104, 102, 102);
+}
+
+#titulo{
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.tabela{
+    display: block;
+    margin: 60px 0 0 35.5%;
+}
+
+.tabela th,td{
+    font-size: 130%;
+    color: white;
+}
+
+.totalPedido{
+    color: rgb(104, 102, 102);
+    max-width: 600px;
+    margin: 100px auto 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.totalPedido h2, p{
+    font-size: 150%;
+}
+        </style>
+    </head>
+
+    <body>
+        <div id="div-titulo">
+            <h1 id="titulo">Pizzaria Diógenes</h1>
+        </div>
+
+        <table class="tabela">
+            <tr>
+                <th>___________ RESUMO DO PEDIDO ___________</th>
+            </tr>
+            <tr>
+                <td id="pedido-descricao"></td>
+            </tr>
+        </table>
+
+        <div class="totalPedido">
+            <h2>Total do Pedido:</h2>
+            <p id="pedido-total">R$ ------</p>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function(){
+                // Extrair os parametros da URL:
+                const urlParams = new URLSearchParams(window.location.search);
+                const pedidoString = urlParams.get('pedido');
+
+                if(pedidoString){
+                    // Converter a String JSON em objeto JavaScript
+                    const pedidoJSON = JSON.parse(pedidoString);
+
+                    // Atualizar o conteudo da pagina com os detalhes do pedido
+                    const descricaPedidoElement = document.getElementById('pedido-descricao');
+                    descricaPedidoElement.innerHTML = pedidoJSON.descricao;
+
+                    const totalPedidoElement = document.getElementById('pedido-total');
+                    totalPedidoElement.textContent = 'Total do Pedido: R$ ' + pedidoJSON.total;
+                }
+            })
+        </script>
+
+    </body>
+</html>

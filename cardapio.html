@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio</title>
+    <style>
+                                                                                /* TOPO */
+body{
+    font-family: monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(104, 102, 102);
+}
+
+#titulo{
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+h1, h2{
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+                                                                                /* SABORES */
+.sabores{
+    text-align: left;
+    max-width: 750px;
+    margin: 0 0 0 300px;
+    background-color: rgb(104, 102, 102);
+}
+
+.sabores > label, summary:hover{
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.sabores > label > details > summary{
+    text-align: center;
+}
+
+.sabores > label, summary{
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+#valores{
+    color: white;
+}
+
+                                                                                /* TAMANHO */
+.tamanho{
+    text-align: left;
+    max-width: 700px;
+    margin: 0 0 0 24%;
+    background-color: rgb(104, 102, 102);
+}
+
+.tamanho > label:hover{
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.tamanho > label{
+    padding: 20px;
+    color: rgb(255, 255, 255);
+
+}
+
+.tamanho > h2{
+    text-align: center;
+}
+
+                                                                                /* BORDA */ /* aqui*/
+.borda{
+    text-align: left;
+    max-width: 700px;
+    margin: 0 0 0 24%;
+    background-color: rgb(104, 102, 102);
+}
+
+.borda > label:hover{
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.borda > label{
+    padding: 20px;
+    color: rgb(255, 255, 255);
+
+}
+
+.borda > h2{
+    text-align: center;
+}
+                                                                                /* EXTRA */
+.extra{
+    text-align: left;
+    max-width: 700px;
+    margin: 0 0 0 24%;
+    background-color: rgb(104, 102, 102);
+
+}
+
+.extra > label:hover{
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.extra > label{
+    padding: 20px;
+    color: rgb(255, 255, 255);
+
+}
+
+.extra > h2{
+    text-align: center;
+}
+
+                                                                                /* OPCIONAIS */
+.opcionais{
+    text-align: left;
+    max-width: 700px;
+    margin: 0 0 0 24%;
+    background-color: rgb(104, 102, 102);
+
+}
+
+.opcionais > label:hover{
+    font-size: 110%;
+    cursor: pointer;
+}
+
+.opcionais > label{
+    padding: 20px;
+    color: rgb(255, 255, 255);
+
+
+
+}
+
+.opcionais > h2{
+    text-align: center;
+}
+
+                                                                                /* BOTÃO */
+.botao > button{
+    max-width: 300px;
+    width: 100%;
+    margin: 50px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    font-size: 150%;
+    border: 0;
+}
+
+.botao > button:hover{
+    cursor: pointer;
+    border: 3px solid white;
+    background-color: rgb(104, 102, 102);
+    color: white;
+    max-width: 350px;
+}
+    </style>
+</head>
+
+<body>
+    <h1 id="titulo"> Pizzaria do Diógones</h1>
+
+    <h2> Monta seu pedido</h2>
+    <br><hr>
+    <h2> Selecione o sabor da pizza:</h2>
+    <p id="valores"> Valores - (Brotinho / Padrão / Grande)</p>
+    <div class="sabores">
+    <label>
+        <input type="radio" name="sabor" value="Margherita" data-sabor="Margherita"> 
+        Margherita (Brotinho: R$ 18.75 / Padrão: R$ 25.00 / Grande: R$ 31.25) 
+        <details>
+            <summary>Ingredientes Margherita</summary>
+            <p>- Queijo</p>
+            <p>- Tomate</p>
+            <p>- Manjericão</p>
+        </details> 
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Calabresa" data-sabor="Calabresa"> 
+        Calabresa (Brotinho: R$ 21.00 / Padrão: R$ 28.00 / Grande: R$ 35.00)
+        <details>
+            <summary>Ingredientes Calabresa</summary>
+            <p>- Calabresa</p>
+            <p>- Cebola</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Frango com Catupiry" data-sabor="Frango com Catupiry"> 
+        Frango com Catupiry (Brotinho: R$ 22.50 / Padrão: R$ 30.00 / Grande: R$ 37.50)
+        <details>
+            <summary>Ingredientes Frango com Catupiry</summary>
+            <p>- Frango desfiado</p>
+            <p>- Catupiry</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Portuguesa" data-sabor="Portuguesa"> 
+        Portuguesa (Brotinho: R$ 24.00 / Padrão: R$ 32.00 / Grande: R$ 40.00)
+        <details>
+            <summary>Ingredientes Portuguesa</summary>
+            <p>- Presunto</p>
+            <p>- Ovos</p>
+            <p>- Milho</p>
+            <p>- Palmito</p>
+            <p>- Cebola</p>
+            <p>- Mussarela</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Quatro Queijos" data-sabor="Quatro Queijos"> 
+        Quatro Queijos (Brotinho: R$ 26.25 / Padrão: R$ 35.00 / Grande: R$ 43.75)
+        <details>
+            <summary>Ingredientes Quatro Queijos</summary>
+            <p>- Parmesão</p>
+            <p>- Provolone</p>
+            <p>- Gorgonzola</p>
+            <p>- Catupiry</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Chocolate" data-sabor="Chocolate">
+        Chocolate (Brotinho: 23.00 / Padrão: 32.50 / Grande: 45.60)
+        <details>
+            <summary>Ingredientes Chocolate</summary>
+            <p>- Creme de avelã</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Carne-seca" data-sabor="Carne-Seca">
+        Carne-seca (Brotinho: 18.00 / Padrão: 25.00 / Grande: 35.00)
+        <details>
+            <summary>Ingredientes Carne-Seca</summary>
+            <p>- Carne-seca</p>
+            <p>- Mussarela</p>
+            <p>- Cebola</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Napolitano" data-sabor="Napolitano">
+        Napolitano (Brotinho: 17.50/ Padrão: 26.00/ Grande: 32.00)
+        <details>
+            <summary>Ingredientes Napolitano</summary>
+            <p>- Mussarela</p>
+            <p>- Tomate</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Baiana" data-sabor="Baiana">
+        Baiana (Brotinho: 20.00/ Padrão: 32.00/ Grande: 40.00)
+        <details>
+            <summary>Ingredientes Baiana</summary>
+            <p>- Ovo</p>
+            <p>- Pimenta</p>
+            <p>- Calabresa</p>
+            <p>- Cebola</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Toscana" data-sabor="Toscana">
+        Toscana (Brotinho: 17.00 / Padrão: 23.00 / Grande: 27.50)
+        <details>
+            <summary>Ingredientes Toscana</summary>
+            <p>- Calabresa</p>
+            <p>- Mussarela</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Marinheira" data-sabor="Marinheira">
+        Marinheira (Brotinho: 25.00 / Padrão: 29.00 / Grande: 36.00)
+        <details>
+            <summary>Ingredientes Marinheira</summary>
+            <p>- Atum</p>
+            <p>- Palmito</p>
+            <p>- Tomate</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Tomarela" data-sabor="Tomarela">
+        Tomarela (Brotinho: 25.00 / Padrão: 32.00 / Grande: 40.00)
+        <details>
+            <summary>Ingredientes Tomarela</summary>
+            <p>- Tomate seco</p>
+            <p>- Mussarela de búfala</p>
+            <p>- Rúcula fresca</p>
+        </details>
+    </label>
+    <label>
+        <input type="radio" name="sabor" value="Mussarela" data-sabor="Mussarela">
+        Mussarela (Brotinho: 16.00 / Padrão: 23.00/ Grande: 28.00)
+        <details>
+            <summary>Ingredientes Musarela</summary>
+            <p>- Mussarela</p>
+            <p>- Tomate</p>
+        </details>
+    </label>
+    </div>
+    <br><hr>                                                                                                     <!--SABORES-->
+    <div class="tamanho">
+    <h2> Selecione o tamanho da Pizza:</h2>
+    <label>
+        <input type="radio" name="tamanho" value="Brotinho" data-tamanho="Brotinho"> 
+        Brotinho (20cm - 4 Pedaços)
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="tamanho" value="Padrao" data-tamanho="Padrao"> 
+        Padrão (30cm - 8 Pedaços)
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="tamanho" value="Grande" data-tamanho="Grande"> 
+        Grande (40cm - 12 Pedaçoes)
+    </label>
+    </div>
+    <br><hr>                                                                                                      <!--TAMANHO-->
+
+    <div class="borda">
+    <h2>Selecione o tipo de borda da Pizza:</h2>
+    <label>
+        <input type="radio" name="borda" value="Sem Borda" data-borda="Sem Borda"> 
+        Sem Borda
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="borda" value="Tradicional" data-borda="Tradicional"> 
+        Tradicional
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="borda" value="Recheada Catupiry" data-borda="Recheada Catupiry"> 
+        Recheada Catupiry +R$ 2.00
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="borda" value="Recheada Cheddar" data-borda="Recheada Cheddar"> 
+        Recheada Cheddar +R$ 3.00
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="borda" value="Recheada Chocolate" data-borda="Recheada Chocolate">
+        Recheada com Chocolate +R$4.50
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="borda" value="Recheada Calabresa" data-borda="Recheada Calabresa">
+        Recheada Calabresa +R$3.80
+    </label>
+    <br>
+    </div>
+    <br><hr>                                                                                                        <!--BORDAS-->
+
+    <div class="extra">
+    <h2>Selecione os ingredientes extras:</h2>
+    <label>
+        <input type="checkbox" name="extra-queijo" data-extra="extra-queijo"> 
+        Queijo Extra +R$ 2.00   
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="extra-cheddar" data-extra="extra-cheddar"> 
+        Cheddar Extra +R$ 5.00   
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="extra-bacon" data-extra="extra-bacon"> 
+        Bacon Extra +R$ 3.00
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="extra-pepperoni" data-extra="extra-pepperoni"> 
+        Pepperoni +R$ 4.00
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="extra-chocolate" data-extra="extra-chocolate">
+        Chocolate +R$ 4.50
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="extra-catupiry" data-extra="extra-catupiry">
+        Catupiry +R$ 2.50
+    </label>
+    </div>
+    <br><hr>                                                                                                    <!--EXTRAS-->
+
+    <div class="opcionais">
+    <h2>Selecione os Itens Opcionais (Sem Custo):</h2>
+    <label>
+        <input type="checkbox" name="opcionais-azeitona" data-extra="opcionais-azeitona"> 
+        Azeitona 
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="opcionais-azeite" data-extra="opcionais-azeite"> 
+        Azeite 
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="opcionais-oregano" data-extra="opcionais-oregano"> 
+        Oregano
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="opcionais-pimenta" data-extra="opcionais-pimenta"> 
+        Pimenta 
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="opcionais-pimenta-do-reino" data-extra="opcionais-pimenta-do-reino"> 
+        Pimenta do reino
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="opcionais-manjericao" data-extra="opcionais-manjericao"> 
+        Manjericão
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="opcionais-tomate" data-extra="opcionais-tomate">
+        Tomate
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="opcionais-sem-azeitona" data-extra="opcionais-sem-azeitona">
+        Sem azeitona
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="opcionais-sem-cebola" data-extra="opcionais-sem-cebola">
+        Sem cebola
+    </label>
+    </div>
+    <br><hr>                                                                                                     <!--OPCIONAIS-->
+    
+    <div class="botao">
+        <button> Montar Pizza </button>
+        <script src="./appPizzaria.js"></script>
+    </div>
+
+</body>
+
+</html>

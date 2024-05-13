@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pizzaria </title>
+        <style>
+            body{
+    font-family: monospace;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(104, 102, 102);
+}
+                                            /* DIV PAI */
+.container{
+    max-width: 600px;
+    margin: 100px auto 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+                                            /* TÍTULO */
+h1{
+    color: rgb(104, 102, 102);
+}
+
+h2{
+    color: rgb(104, 102, 102);
+    font-style: italic;
+}
+
+                                            /* BOTÃO */
+.container > #button{
+    border-radius: 30px;
+    height: 30px;
+    width: 160px;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    text-decoration: underline;
+}
+
+                                            /* BOTÃO HOVER */
+.container > #button:hover{
+    background-color: rgb(180, 180, 180);
+    width: 250px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    
+}
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1> Bem-vindo a Pizzaria Diógenes</h1>
+            <h2> Conheça nossas saborosas e deliciosas opções de pizza!</h2>
+            <button id="button" onclick="window.location.href='http://localhost:4500/cardapio'">MONTAR PEDIDO</button>
+        </div>
+    </body>
+</html>
